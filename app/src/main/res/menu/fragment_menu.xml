@@ -5,12 +5,16 @@
 <!--    //добавить новую карточку-->
     <item android:id="@+id/action_add"
         android:title="@string/add"
+        android:orderInCategory="10"
         add:showAsAction="never"/>
 
 
 <!--//удалить-->
     <item android:id="@+id/action_clear"
         android:title="@string/text_clear"
+        android:orderInCategory="20"
         add:showAsAction="never"/>
 
 </menu>
+
+<!--  //  android:orderInCategory="10" это вес и самый легкий будет сверху-->

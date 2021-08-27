@@ -15,16 +15,40 @@ public class CardSourceImpl implements CardSourse {
     private Resources resources;
 
 
-    @Override
-    public int size() {
-        return 0;
-    }
-
+    // добавили по 9му карточки
+    //обновили имплементацию. реализацию CardSourse
     @Override
     public CardData getCardData(int position) {
         return dataSource.get(position);
     }
 
+    public int size() {
+        return dataSource.size();
+    }
+
+    @Override
+    public void deleteCardData(int position) {
+        dataSource.remove(position);
+    }
+
+    @Override
+    public void updateCardData(int position, CardData newCardData) {
+        dataSource.set(position,newCardData);
+    }
+
+    @Override
+    public void addCardData(CardData newCardData) {
+        dataSource.add(newCardData);
+    }
+
+    @Override
+    public void clearCardData() {
+        dataSource.clear();
+    }
+
+
+
+    //8
     //инициализируем объект из ресурсов
     public CardSourceImpl(Resources resources) {
         dataSource = new ArrayList<>();
